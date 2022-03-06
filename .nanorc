@@ -1,0 +1,87 @@
+# .nanorc
+# Configuration file for GNU nano
+# by decrovert (adapted from example configuration)
+
+# Do case-sensitive searches by default.
+set casesensitive
+
+# Constantly display the cursor position in the status bar or minibar.
+set constantshow
+
+# Draw a vertical stripe at the given column, to help judge text width
+# (this option does not have a default value).
+set guidestripe 75
+
+# Display a "scrollbar" on the righthand side of the edit window.
+set indicator
+
+# Display line numbers to the left (and any anchors in the margin).
+set linenumbers
+
+# Enable mouse support, if available for your system. When enabled,
+# mouse clicks can be used to place the cursor, set the mark (with a
+# double click) and execute shortcuts. The mouse will work in the
+# X Window System, and on the console when gpm is running.
+set mouse
+
+# Use this tab size instead of the default; it must be greater than 0.
+set tabsize 4
+
+# Convert each typed tab to the fitting number of spaces.
+set tabstospaces
+
+# === Syntax coloring ===
+# For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
+
+# Includes most of the existing syntax definitions.
+include "/usr/share/nano/*.nanorc"
+
+# Overrides the settings of 'tabsize' and 'tabstospaces' for some
+# programminglanguages.
+extendsyntax python tabgives "    "
+extendsyntax rust tabgives "    "
+extendsyntax makefile tabgives "	"
+extendsyntax go tabgives "	"
+
+# === Key bindings ===
+# For all details, see 'man nanorc', section REBINDING KEYS.
+
+# The <Ctrl+Delete> keystroke deletes the word to the right of the cursor.
+# On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is
+# the ASCII character for backspace, so it is bound by default to the
+# backspace function. The <Backspace> key itself produces a different
+# keycode, which is hard-bound to the backspace function. Therefore, if
+# you normally use <Backspace> for backspacing and not ^H, you can make
+# <Ctrl+Backspace> delete the word to the left of the cursor with:
+bind ^H chopwordleft main
+
+# Makes nano have keybindings that are more "usual", such as ^O for Open,
+# ^F for Find, ^H for Help, and ^Q for Quit.
+bind ^X cut main
+bind ^C copy main
+bind ^V paste all
+bind ^Q exit all
+bind ^S savefile main
+bind ^W writeout main
+bind ^O insert main
+set multibuffer
+bind ^H help all
+bind ^H exit help
+bind ^F whereis all
+bind ^B wherewas all
+bind ^R replace main
+bind ^Z undo main
+bind ^Y redo main
+unbind ^K main
+unbind ^U all
+unbind ^N main
+unbind ^Y all
+unbind M-J main
+unbind M-T main
+bind ^A mark main
+bind ^P location main
+bind ^T gotoline main
+bind ^T gotodir browser
+bind ^T cutrestoffile execute
+bind ^L linter execute
+bind ^E execute main
