@@ -31,9 +31,15 @@ function pacman_remove_unused() {
 }
 
 # Improved commands
-alias ls="ls --color"
-alias grep="grep --color"
-alias mkdir="mkdir -pv"
+alias \
+    ls="ls -h --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    mkdir="mkdir -pv" \
+    rm="rm -Iv" \
+    mv="mv -iv" \
+    cp="cp -iv"
 
 # New command names
-alias cls="clear"
+alias \
+    cls="clear"
