@@ -27,7 +27,7 @@ print_bashrc() {
 }
 
 pacman_remove_unused() {
-    pacman -Qdtq | run_command_explicit doas pacman -Rsn
+    pacman -Qdtq | run_command_explicit doas pacman -Rsn -
 }
 
 # Improved commands
