@@ -18,16 +18,16 @@ PS1="${GREEN}\u${RESET_COLOUR}@${BLUE}\w${RESET_COLOUR} \$ "
 
 # This function should be used inside every other function
 # to let the user know which commands the function is running.
-function run_command_explicit() {
+run_command_explicit() {
     echo -e "${YELLOW}running:${RESET_COLOUR} $*" && $*
 }
 
-function print_bashrc() {
+print_bashrc() {
     run_command_explicit cat ~/.bashrc
 }
 
-function pacman_remove_unused() {
-    run_command_explicit doas pacman -Rsn $(pacman -Qdtq)
+pacman_remove_unused() {
+    pacman -Qdtq | run_command_explicit doas pacman -Rsn
 }
 
 # Improved commands
