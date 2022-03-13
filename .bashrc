@@ -16,6 +16,21 @@ RESET_COLOUR="\e[0m"
 # PS1 variable
 PS1="${GREEN}\u${RESET_COLOUR}@${BLUE}\w${RESET_COLOUR} \$ "
 
+# Improved commands
+alias \
+    ls="ls -h --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    mkdir="mkdir -pv" \
+    rm="rm -Iv" \
+    mv="mv -iv" \
+    cp="cp -iv" \
+    pacman="pacman --color=auto"
+
+# New command names
+alias \
+    cls="clear"
+
 # This function should be used inside every other function
 # to let the user know which commands the function is running.
 run_command_explicit() {
@@ -29,17 +44,3 @@ print_bashrc() {
 pacman_remove_unused() {
     pacman -Qdtq | run_command_explicit doas pacman -Rsn -
 }
-
-# Improved commands
-alias \
-    ls="ls -h --color=auto --group-directories-first" \
-    grep="grep --color=auto" \
-    diff="diff --color=auto" \
-    mkdir="mkdir -pv" \
-    rm="rm -Iv" \
-    mv="mv -iv" \
-    cp="cp -iv"
-
-# New command names
-alias \
-    cls="clear"
