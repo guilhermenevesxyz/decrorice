@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# .xinitrc
+# Shell script thet is called automatically when starting the X server
+# by decrovert
+
 X_USER_RESOURCES=$HOME/.Xresources
 X_SYSTEM_RESOURCES=/etc/X11/xinit/.Xresources
 X_SCRIPTS=/etc/X11/xinit/xinitrc.d
