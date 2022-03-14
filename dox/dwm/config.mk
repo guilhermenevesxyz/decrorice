@@ -25,7 +25,7 @@ FREETYPELIBS = -lfontconfig -lXft
 FREETYPEINC = /usr/include/freetype2
 
 # OpenBSD (uncomment if needed)
-#FREETYPEINC = ${X11INC}/freetype2
+#FREETYPEINC = $(X11INC)/freetype2
 
 # Includes and libs
 INCS = -I$(X11INC) -I$(FREETYPEINC)
@@ -38,6 +38,6 @@ CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L \
 CFLAGS = -std=c17 -w -O2 $(INCS) $(CPPFLAGS)
 
 # Debug mode (uncomment)
-#CFLAGS = -std=c17 -pedantic -Wall -Wextra -O0 ${INCS} ${CPPFLAGS}
+#CFLAGS = -std=c17 -pedantic -Wall -Wextra -O0 $(INCS) $(CPPFLAGS)
 
 LDFLAGS = $(LIBS)
