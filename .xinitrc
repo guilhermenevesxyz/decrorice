@@ -38,5 +38,10 @@ xrandr --dpi 115
 hsetroot -solid "#242424"
 setxkbmap pt
 
+while true; do
+    xsetroot -name "$(date +"%A %d/%m/%y %H:%M")"
+    sleep 30s
+done &
+
 # Window manager
 exec dwm
