@@ -8,7 +8,7 @@ X_USER_RESOURCES=$HOME/.Xresources
 X_SYSTEM_RESOURCES=/etc/X11/xinit/.Xresources
 X_SCRIPTS=/etc/X11/xinit/xinitrc.d
 
-AUTOSTART_SCRIPT=$HOME/x_autostart.sh
+AUTOSTART_SCRIPT=$HOME/dox/scripts/x_autostart.sh
 
 # Merge in defaults and keymaps
 if [ -f $X_SYSTEM_RESOURCES ]; then
