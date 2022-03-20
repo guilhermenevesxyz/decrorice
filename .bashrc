@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # .bashrc
 # Configuration for the bash shell
