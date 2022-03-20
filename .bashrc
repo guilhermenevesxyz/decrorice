@@ -47,3 +47,6 @@ print_bashrc() {
 pacman_remove_unused() {
     run_command_explicit "doas pacman --color=auto -Rsn $(pacman -Qdtq)"
 }
+
+# Execute commands
+decrofetch
