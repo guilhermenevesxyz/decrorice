@@ -25,10 +25,10 @@ set linenumbers
 set mouse
 
 # Use this tab size instead of the default; it must be greater than 0.
-set tabsize 4
+set tabsize 8
 
 # Convert each typed tab to the fitting number of spaces.
-set tabstospaces
+unset tabstospaces
 
 # === Syntax coloring ===
 # For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
@@ -38,7 +38,6 @@ include "/usr/share/nano/*.nanorc"
 
 # Overrides the settings of 'tabsize' and 'tabstospaces' for some
 # programminglanguages.
-extendsyntax python tabgives "    "
 extendsyntax rust tabgives "    "
 extendsyntax makefile tabgives "	"
 extendsyntax go tabgives "	"
