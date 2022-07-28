@@ -1,0 +1,10 @@
+# Dmenu
+super + p
+	dmenu_run -fn "OverpassMono:size=10" -nb "#222222" -nf "#bbbbbb" -sb "#203c3c" -sf "#eeeeee"
+
+# Audio
+super + a
+	amixer -D pipewire sset Master 5%-
+
+super + s
+	amixer -D pipewire sset Master 5%+
