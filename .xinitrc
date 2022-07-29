@@ -11,4 +11,4 @@ setxkbmap pt
 sxhkd &
 picom &
 
-exec tinywm
+exec decrowm
