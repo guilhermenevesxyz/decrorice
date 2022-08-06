@@ -6,7 +6,11 @@
 
 xrandr --dpi 115
 hsetroot -solid "#242424"
-setxkbmap pt
+
+# keyboard configuration
+setxkbmap -layout pt,no # add layouts
+setxkbmap -option
+setxkbmap -option "grp:win_space_toggle"
 
 sxhkd &
 picom &
